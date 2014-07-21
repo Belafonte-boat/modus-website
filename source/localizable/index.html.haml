@@ -9,68 +9,11 @@
     = partial "partials/clients"
     / End of #clients
     = partial "partials/app"
-  
 
-<<<<<<< HEAD
     = partial "partials/works"
-=======
-    / Section Works
-    %section#work
-      .container
-        %h2 Marchi
-        %p 
-          Modus profuma la tua vita con le essenze piu’ ricercate,<br /> 
-          cura il tuo corpo con i prodotti più indicati per la tua pelle e inventa con te i trucchi piu’ personali.<br />
-          Se la bellezza fugge, Modus la ferma!
-        / Begin of  .category
-        .filter_wrap
-          %span Select category
-          / Begin of #filter_wrap
-          %ul#filters
-            %li.active
-              %a{"data-filter" => "*"} All
-            %li
-              %a{"data-filter" => ".white, .yellow"} Branding
-            %li
-              %a{"data-filter" => ".blue, .red, .white"} Design
-            %li
-              %a{"data-filter" => ".saphir, .blue, .green"} Development
-            %li
-              %a{"data-filter" => ".blue, .green"} Printing
-            / data filters examplese: ".design, .branding, :not(.branding)"
-          / End of #filter_wrap
-        / End of .category
-        / Begin of #filter_content
-        #filter_content
-          .red
-            = image_tag "marchi/logo-01.png", class:"bttrlazyloading"
-          .white
-            = image_tag "marchi/logo-02.png", class:"bttrlazyloading"
-          .saphir
-            = image_tag "marchi/logo-03.png", class:"bttrlazyloading"
-          .blue
-            = image_tag "marchi/logo-04.png", class:"bttrlazyloading"
-          .green
-            = image_tag "marchi/logo-05.png", class:"bttrlazyloading"
-          .yellow
-            = image_tag "marchi/logo-06.png", class:"bttrlazyloading"
-          .red
-            = image_tag "marchi/logo-07.png", class:"bttrlazyloading"
-          .white
-            = image_tag "marchi/logo-08.png", class:"bttrlazyloading"
-          .saphir
-            = image_tag "marchi/logo-09.png", class:"bttrlazyloading"
-          .blue
-            = image_tag "marchi/logo-10.png", class:"bttrlazyloading"
-          .green
-            = image_tag "marchi/logo-11.png", class:"bttrlazyloading"
-          .yellow
-            = image_tag "marchi/logo-12.png", class:"bttrlazyloading"
-        / End of #filter_content
-      / end of container in works section
-    / end of work
-    .separator
->>>>>>> FETCH_HEAD
+
+
+
 
     = partial "partials/team"
     = partial "partials/club"
