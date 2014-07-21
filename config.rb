@@ -6,8 +6,8 @@ activate :deploy do |deploy|
   deploy.host = "web332.webfaction.com"
   deploy.user = "piermaria"
   deploy.password = "Nonmelaricordo2"
-  deploy.path = "/home/piermaria/webapps/italiastartupvisa"
-  deploy.build_before = true
+  deploy.path = "/home/piermaria/webapps/modus"
+  
 end
 
 
@@ -59,8 +59,7 @@ configure :build do
     }
   end
 
-  # # Enable cache buster
-  activate :cache_buster
+  activate :asset_hash
 
 
   # # Use relative URLs

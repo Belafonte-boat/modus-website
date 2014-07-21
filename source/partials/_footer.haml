@@ -12,12 +12,16 @@
         %p
           Vuoi essere sempre aggiornata sulle novità Modus?<br />
           Iscriviti alla nostra newsletter per ricevere tutti gli update.
-        %form.contact-form{action: "form_data.php", method: "post", novalidate: ""}
-          
-          %input#name.form-name{name: "name", placeholder: "Name", type: "text"}/
-          %input#email.form-email{name: "email", placeholder: "Email", type: "email"}/
 
-          %button.btn Iscriviti
+        %form.contact-form#mc-form
+          
+          %input#mc-name.form-name{name: "FNAME", placeholder: "Nome", type: "text"}/
+          %label{for: "mc-name"}
+          %input#mc-surname.form-name{name: "LNAME", placeholder: "Cognome", type: "text"}/
+          %label{for: "mc-surname"}
+          %input#mc-email.form-email{name: "EMAIL", placeholder: "Email", type: "email"}/
+          %label{for: "mc-email"}
+          %button.btn{type: "submit"} Iscriviti
         / End of .container
     %p.info
       Vallesi S.p.A Socio Unico - Via Circonvallazione Giolitti, 23 - 12030 Torre San Giorgio (CN) - Italy - Phone +39 0172. 96176 - Fax +39 0172 96269

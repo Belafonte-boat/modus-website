@@ -1,12 +1,6 @@
 $(document).ready( function () {
 
-    $(".shop").each(function( index ) {
-        address = $(this).find(".address").text();
-        desc = $(this).html();
-        title = $(this).find("h6").text();
-        latlong(address,title,desc);
 
-    });
     var detectmob = false;  
     if(navigator.userAgent.match(/Android/i)
       || navigator.userAgent.match(/webOS/i)
@@ -266,48 +260,9 @@ $(document).ready( function () {
         return false;
     });
 
-    //validate contact form
-    $("form.contact-form").validate({
-        rules: {
-          name: {
-            required: true,
-            minlength: 2
-          },
-          message: {
-            required: true,
-            minlength: 2
-          },
-          comments: {
-            required: true,
-            minlength: 2
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          phone: {
-            required: false,
-            number: true
-          }
-        },
-        messages: {
-          name: {
-            required: "This field is required",
-            minlength: jQuery.format("At least {0} characters required")
-          },
-          comments: {
-            required: "This field is required",
-            minlength: jQuery.format("At least {0} characters required")
-          },
-          email: {
-            required: "This field is required",
-            email: "Wrong e-mail address"
-          }            
-        },
-        errorClass: "error"
-      });
 
-});      
+
+});
 var addresses = new Array();
 var geocoder;
 var map;

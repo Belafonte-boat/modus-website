@@ -16,10 +16,13 @@
       =image_tag "card-13.png", class:"bttrlazyloading"
       %h3
         Richiedi la modus card<br />
-      %form.contact-form{action: "form_data.php", method: "post", novalidate: ""}
-          
-        %input#name.form-name{name: "name", placeholder: "Name", type: "text"}/
-        %input#email.form-email{name: "email", placeholder: "Email", type: "email"}/
+      %form.contact-form#mc-vipcard
+        %input#vip-name.form-name{name: "FNAME", placeholder: "Nome", type: "text"}/
+        %label{for: "vip-name"}
+        %input#vip-surname.form-name{name: "LNAME", placeholder: "Cognome", type: "text"}/
+        %label{for: "vip-surname"}
+        %input#vip-email.form-email{name: "EMAIL", placeholder: "Email", type: "email"}/
+        %label{for: "vip-email"}
 
-        %button.btn Richiedi
+        %button.btn{type: "submit"} Richiedi
     .clear

@@ -15,7 +15,7 @@
     %meta{content: "", name: "description"}/
     %meta{content: "ThemeStreet.Net", name: "author"}/
     %meta{content: "width=device-width", name: "viewport"}/
-
+    %meta{content: "app-id=890472407", name: "apple-itunes-app"}/
     %link{ rel: "apple-touch-icon", sizes: "152x152", href: "apple-touch-icon-152x152-precomposed.png?v=1" }
     %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png?v=1" }
     %link{ rel: "apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png?v=1" }
@@ -34,7 +34,7 @@
     / Internet Explorer 8 or older doesn't support media query. This script helps ie7 and ie8 to recognize media queries
     /[if lt IE 9]
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    = javascript_include_tag "vendor/jquery-1.10.2.min"
+    = javascript_include_tag "vendor/jquery-1.10.2"
     :javascript
       $(window).load(function() {
         $(".loader").fadeOut("slow");
