@@ -14,7 +14,12 @@
 
     %meta{content: "", name: "description"}/
     %meta{content: "ThemeStreet.Net", name: "author"}/
-    %meta{content: "width=device-width", name: "viewport"}/
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+
+
+    %meta{:name => "apple-mobile-web-app-capable", :content =>"yes"}
+    %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+
     %meta{content: "app-id=890472407", name: "apple-itunes-app"}/
     %link{ rel: "apple-touch-icon", sizes: "152x152", href: "apple-touch-icon-152x152-precomposed.png?v=1" }
     %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png?v=1" }

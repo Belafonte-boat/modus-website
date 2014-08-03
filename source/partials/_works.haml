@@ -7,24 +7,22 @@
       cura il tuo corpo con i prodotti più indicati per la tua pelle e inventa con te i trucchi piu’ personali.<br />
       Se la bellezza fugge, Modus la ferma!
     / Begin of  .category
-    .filter_wrap
-      %span Select category
-      / Begin of #filter_wrap
-      %ul#filters
-        %li.active
-          %a{"data-filter" => "*"} All
-        %li
-          %a{"data-filter" => ".white, .yellow"} Branding
-        %li
-          %a{"data-filter" => ".blue, .red, .white"} Design
-        %li
-          %a{"data-filter" => ".saphir, .blue, .green"} Development
-        %li
-          %a{"data-filter" => ".blue, .green"} Printing
-        / data filters examplese: ".design, .branding, :not(.branding)"
-      / End of #filter_wrap
-    / End of .category
-    / Begin of #filter_content
+    -#
+      .filter_wrap
+        %span Select category
+        / Begin of #filter_wrap
+        %ul#filters
+          %li.active
+            %a{"data-filter" => "*"} All
+          %li
+            %a{"data-filter" => ".white, .yellow"} Branding
+          %li
+            %a{"data-filter" => ".blue, .red, .white"} Design
+          %li
+            %a{"data-filter" => ".saphir, .blue, .green"} Development
+          %li
+            %a{"data-filter" => ".blue, .green"} Printing
+
     #filter_content
       .red
         = image_tag "marchi/logo-01.png", class:"bttrlazyloading"

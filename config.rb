@@ -59,7 +59,7 @@ configure :build do
     }
   end
 
-  activate :asset_hash
+  #activate :asset_hash
 
 
   # # Use relative URLs
@@ -70,5 +70,5 @@ configure :build do
   activate :smusher
 
   # Or use a different image path
-  #set :http_path, "http://thedoers.co/"
+  activate :relative_assets
 end

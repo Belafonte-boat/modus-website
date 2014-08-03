@@ -144,12 +144,13 @@ $(document).ready( function () {
       $('header nav').mouseover(function(){
         $(this).children().show();
         $('header nav li a').click(function(){
+
           $(this).parent().parent().hide();
         });
         
       });
-      $('header nav').mouseout(function(){
-        $(this).children().hide();
+      $('#header').mouseout(function(){
+        $('header nav').children().hide();
       });
 
       // $('header nav').mouseover(function(){
@@ -191,7 +192,7 @@ $(document).ready( function () {
           // alert(current);
           var boxclass = "active-popup";
           var arrowclass = "active-arrow";
-          console.log(current)
+
           $('.slide .arrow_up.'+current).addClass(arrowclass).parent().siblings().children().removeClass(arrowclass);
 
           $('.slider2_popups .popup-item.'+current).addClass(boxclass).siblings().removeClass(boxclass);
@@ -263,43 +264,6 @@ $(document).ready( function () {
 
 
 });
-var addresses = new Array();
-var geocoder;
-var map;
-var infowindow = null;
-var geocoder = new google.maps.Geocoder();
-
-function latlong(address,title,desc){
-
-    geocoder.geocode( { 'address': address}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            latlong = results[0].geometry.location;
-            var random = 1 + Math.floor(Math.random() * 3);
-            var marker = new google.maps.Marker({
-                map: map,
-                position: latlong,
-                icon: "images/modusUI_final_pinmap.png",
-                title: title,
-            });
-
-            // Set up markers with info windows
-            google.maps.event.addListener(marker, 'click', function() {
-                // Close all open infowindows
-                if (infowindow) {
-                    infowindow.close();
-                }
-
-                infowindow = new google.maps.InfoWindow({
-                    content: desc
-                });
-
-                infowindow.open(map,marker);
-            });
-        } else {
-            return "Geocode was not successful for the following reason: " + status;
-        }
-    });
-}
 
 
 //PLACEHOLDER
