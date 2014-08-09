@@ -297,7 +297,7 @@ var styles = [{"featureType":"water","elementType":"all","stylers":[{"hue":"#d9b
 
   var mapOptions = {
     zoom: 6,
-    center: new google.maps.LatLng(42.8333,12.8333),
+    center: new google.maps.LatLng(42,11),
     scrollwheel: false,
     styles: styles,
     // disable mapType-top_right corner

@@ -1,0 +1,59 @@
+{
+    "run": {
+        "@path": "/.c9/runners",
+        "configs": {
+            "json()": {
+                "Server": {
+                    "debug": true,
+                    "name": "Server",
+                    "command": "middleman -h $IP -p $PORT",
+                    "runner": "Shell command"
+                },
+                "Build": {
+                    "debug": true,
+                    "name": "Build",
+                    "command": "middleman build ",
+                    "runner": "Shell command"
+                },
+                "Deploy Staging": {
+                    "debug": true,
+                    "name": "Deploy Staging",
+                    "command": "rake deploy:staging",
+                    "runner": "Shell command"
+                },
+                "Deploy Prod": {
+                    "debug": true,
+                    "name": "Deploy Prod",
+                    "command": "rake deploy:production",
+                    "runner": "Shell command"
+                }
+            },
+            "@inited": "true"
+        }
+    },
+    "share": {
+        "@preview": false,
+        "@app": false,
+        "@useOwnerSettings": false
+    },
+    "ace": {
+        "@newLineMode": "unix",
+        "@tabSize": "4",
+        "@useSoftTabs": "true",
+        "@guessTabSize": "true"
+    },
+    "find.nak": {
+        "@searchLimit": 100
+    },
+    "language": {
+        "@warnLevel": "info",
+        "@instanceHighlight": "true",
+        "@undeclaredVars": "true",
+        "@unusedFunctionArgs": "false"
+    },
+    "build": {
+        "@path": "/.c9/builders",
+        "@saveall": true,
+        "@builder": "auto"
+    }
+}

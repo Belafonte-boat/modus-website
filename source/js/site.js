@@ -13,11 +13,9 @@
 //= require "vendor/jquery-timing.min"
 
 
-var addresses = new Array();
-var geocoder;
 var map;
 var infowindow = null;
-var geocoder = new google.maps.Geocoder();
+
 var places= {
     "points": [
         {
@@ -111,7 +109,7 @@ var places= {
         {
             "phone": "0421\/307260",
             "opening": "Orario continuato:10.00-20.00",
-            "name": "OUTLET BIMBUS",
+            "name": "MCARTHURGLEN DESIGNER OUTLETM",
             "address": "NOVENTA DI PIAVE-VIA MARCO POLO,1-30020",
             "B": "12.53522709999993",
             "K": "45.67136920000001"
@@ -121,8 +119,8 @@ var places= {
             "opening": "Orario continuato:10.00-20.00",
             "name": "OUTSTORE SRL",
             "address": "AGIRA-CONTRADA MANDRE BIANCHE-94011",
-            "B": "-122.37",
-            "K": "37.58"
+            "B": "14.483889",
+            "K": "37.5725"
         },
         {
             "phone": "0586\/882204",
@@ -314,13 +312,14 @@ $( document ).ready(function() {
 
 
     $(places.points).each($).wait(10, function(index) {
-
-        address = $(this)[0].address;
-        desc = $(this)[0].opening + '<br />Telefono ' +$(this)[0].phone;
-        title = $(this)[0].name;
-        pop = '<h6>' + title + '</h6><p><span class="address">' + address + '</span><br /><span class="desc">' + desc + '</span></p>';
-        $("ul#lista").append('<li class="shop"><img class="bttrlazyloading" alt="" width="622" height="622" src="http://profumeriemodus.it/new/images/shops/shopbag-3f01ddb8.png" /><h6>' + title + '</h6><p><span class="address">' + address + '</span><br /><span class="desc">' + desc + '</span></p></li>');
-        latlong = new google.maps.LatLng($(this)[0].K, $(this)[0].B);
+        var place = $(this)[0];
+       
+        var address = place.address;
+        var desc = place.opening + '<br />Telefono ' +place.phone;
+        var title = place.name;
+        var pop = '<h6>' + title + '</h6><p><span class="address">' + address + '</span><br /><span class="desc">' + desc + '</span></p>';
+        $("ul#lista").append('<li class="shop"><img class="bttrlazyloading" alt="" width="622" height="622" src="http://profumeriemodus.it/new/images/shops/shopbag.png" /><h6>' + title + '</h6><p><span class="address">' + address + '</span><br /><span class="desc">' + desc + '</span></p></li>');
+        var latlong = new google.maps.LatLng(place.K, place.B);
 
         var random = 1 + Math.floor(Math.random() * 3);
         var marker = new google.maps.Marker({
@@ -337,7 +336,7 @@ $( document ).ready(function() {
                 infowindow.close();
             }
 
-            infowindow = new google.maps.InfoWindow({
+            var infowindow = new google.maps.InfoWindow({
                 content: pop
             });
 

@@ -1,15 +1,27 @@
 require 'builder'
 require 'susy'
 
-activate :deploy do |deploy|
-  deploy.method = :ftp
-  deploy.host = "web332.webfaction.com"
-  deploy.user = "piermaria"
-  deploy.password = "Nonmelaricordo2"
-  deploy.path = "/home/piermaria/webapps/modus"
-  
-end
 
+case ENV['TARGET'].to_s.downcase
+when 'production'
+  activate :deploy do |deploy|
+    deploy.method = :ftp
+    deploy.host = "www.profumeriemodus.it"
+    deploy.user = "www.profumeriemodus.it"
+    deploy.password = "k32wh54jp8"
+    deploy.path = "/new"
+    
+  end
+else
+  activate :deploy do |deploy|
+    deploy.method = :ftp
+    deploy.host = "web332.webfaction.com"
+    deploy.user = "piermaria"
+    deploy.password = "Nonmelaricordo2"
+    deploy.path = "/home/piermaria/webapps/modus"
+    
+  end
+end
 
 
 activate :bower
@@ -18,7 +30,8 @@ activate :livereload
 activate :i18n, :mount_at_root => :en
 
 page "/", :layout => :html5
-page "/privacypolicy.html", :layout => :html5
+page "/privacypolicy-it.html", :layout => :html5_nojs
+page "/privacypolicy.html", :layout => :html5_nojs
 page "/termsandconditions.html", :layout => :html5
 page "/sitemap.xml", :layout => false
 

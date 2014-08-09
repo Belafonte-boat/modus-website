@@ -1,0 +1,1 @@
+{"filter":false,"title":"Build - Stopped","tooltip":"Build - Stopped","undoManager":{"mark":0,"position":-1,"stack":[]},"output":{"id":"output504622","width":967,"height":112,"scrollTop":5515.545297622681,"config":{"debug":true,"name":"Build","command":"middleman build ","runner":"Shell command"}},"timestamp":1407356481944,"hash":"da39a3ee5e6b4b0d3255bfef95601890afd80709"}
